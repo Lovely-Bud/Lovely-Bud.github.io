@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content ="width = device-width, initial-scale = 1.0">
+    <title>Eating Point</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-------Header Section------------>
+    <section id="header">
+        <nav>
+            <a href="food_proj.html"><img src="images/front_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#promise">PROMISE</a></li>
+                    <li><a href="#container">SEARCH</a></li>
+                    <li><a href="#footer">MESSAGE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>A FOODIE'S ULTIMATE PARADISE</h1>
+            <p>Dedicated to finding the recipes you desire for the PERFECT day.</p>
+            <a href="#container" class="away-btn">Search Away</a>
+        </div>
+    
+    </section>
+
+<!---------Our Promises Section-------->
+    <section id="promise">
+        <h1>Our Promise</h1>
+        <p>Eating Point is a website that was built to fulfill three basic needs of its users.</p>
+
+        <div class="row">
+            <div class="promise-col">
+                <h3>Meal-Preping</h3>
+                <p>The website provides quick and easy recipies which can be used in prepping and scheduling meals.</p>
+            </div>
+
+            <div class="promise-col">
+                <h3>Efficiency</h3>
+                <p>Our goal is efficient usage of time and ingredients.</p>
+            </div>
+
+            <div class="promise-col">
+                <h3>Clarity</h3>
+                <p>We want the user to focus on the experience of cooking rather than the hassle behind it.</p>
+            </div>
+        </div>
+    </section>
+
+<!---------Search Section---------------->
+    <section id = "container">
+        <div class = "meal-wrapper">
+            <div class = "meal-search">
+                <h2 class = "title">EATING POINT</h2>
+                <blockquote>Look up your pantry!<br>
+                    <cite>Recipies, Videos and much needed Fun</cite>
+                </blockquote>
+                
+                <div class = "meal-search-box">
+                    <input type = "text" class = "search-control" placeholder="Search Away" id = "search-input">
+                    <button type = "submit" class = "search-btn btn" id = "search-btn">
+                        <i class = "fa fa-search"></i>
+                    </button>
+               </div>
+            </div>
+            
+            <div class = "meal-result">
+                <h2 class = "title">Your Results:</h2>
+                <div id= "meal">
+                    <!-- meal item -->
+                    <!---<div class = "meal-item">
+                        <div class = "meal-img">
+                            <img src = "food.jpg" alt = "food">
+                        </div>
+                        <div class = "meal-name">
+                            <h3>Potato Chips</h3>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>---->
+                </div>
+            </div>
+
+            <div class="meal-details">
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+                    <i class = "fa fa-times"></i>
+                </button>
+                
+                <!-- meal content -->
+                <div class = "meal-details-content">
+                    <h2 class = "recipe-title">Meals Name Here</h2>
+                    <p class = "recipe-category">Category Name</p>
+
+                    <div class = "recipe-instruct">
+                        <h3>Instructions:</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+                        <p>Eat a good amount of food</p>
+                    </div>
+                    
+                    <div class = "recipe-meal-img">
+                        <img src = "food.jpg" alt = "">
+                    </div>
+                    
+                    <div class = "recipe-link">
+                         <a href = "#" target = "_blank">Tutorial</a>
+                    </div> 
+                </div>
+            </div>          
+        </div>
+    </section>
+    
+    <script src = "script.js"></script>
+
+<!--------Message Section----------->
+    <section id="footer">
+        <h4>Creator's Message</h4>
+        <p>Eating Point is a minor project by Shreya and Vidhi.<br> Hoping that this website is of help to someone in the near future.</p>
+        <div class="icons">
+            <i class = "fa fa-facebook"></i>
+            <i class = "fa fa-twitter"></i>
+            <i class = "fa fa-instagram"></i>
+            <i class = "fa fa-linkedin"></i>
+        </div>
+        <p>Connect with us </p>
+
+    </section>
+
+
+<!-------Javascript for toggle menu(close and open)---------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu()
+        {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu()
+        {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+
+</body>
+</html>
